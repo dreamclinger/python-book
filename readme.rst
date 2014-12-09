@@ -55,8 +55,8 @@ Advanced Object-Oriented Programming
 Use __slots__
 Useproperty
 Multiple inheritance
-Custom class
-Use metaclass
+Custom class:  oodesign/custom-class.py
+Use metaclass: oodesign/meta-class.py
 
 Errors, debugging and testing
 ====
