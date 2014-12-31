@@ -1,0 +1,22 @@
+
+###type
+1. type: type(123)
+2. isinstance: obj = Animal() ;isinstance(obj, Animal)
+3. dir
+
+###__slot__
+1. __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
+    a.当我们定义了一个class，创建了一个class的实例后，我们可以给该实例绑定任何属性和方法，这就是动态语言的灵活性
+    b.如果我们想要限制class的属性怎么办？比如，只允许对Student实例添加name和age属性
+
+###@property
+1. s.score = 60 # OK，实际转化为s.set_score(60)
+    a. 为了限制score的范围，可以通过一个set_score()方法来设置成绩，再通过一个get_score()来获取成绩
+    b. @property的实现比较复杂，我们先考察如何使用。把一个getter方法变成属性，只需要加上@property就可以了，此时，@property本身又创建了另一个装饰器@score.setter，负责把一个setter方法变成属性赋值，于是，我们就拥有一个可控的属性操作
+    c. @property广泛应用在类的定义中，可以让调用者写出简短的代码，同时保证对参数进行必要的检查，这样，程序运行时就减少了出错的可能性
+
+###multi-success
+1. 由于Python允许使用多重继承，因此，Mixin就是一种常见的设计。
+
+###元类,metaclass
+
